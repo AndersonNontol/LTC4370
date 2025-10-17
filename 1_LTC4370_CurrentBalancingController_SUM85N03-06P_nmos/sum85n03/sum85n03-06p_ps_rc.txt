@@ -1,0 +1,116 @@
+*Feb 18, 2013
+*ECN S13-0344, Rev. C
+*File Name: SUM85N03-06P_PS_RC.txt, and SUM85N03-06P_PS_RC.lib
+*This document is intended as a SPICE modeling guideline and does not
+*constitute a commercial product datasheet. Designers should refer to the
+*appropriate datasheet of the same number for guaranteed specification
+*limits.
+* source COMPONENT GENERATOR
+.SUBCKT SUM85N03-06P_PS_RC D G S PARAMS: C2=1000 R1=1M C3=1000 R2=1M C4=1000
++  R3=1M C5=1000 R4=1M R5=1M C1=1000
+C_CT6         N11708 N11712  77.5374m  TC=0,0 
+C_CF7         0 N18737  163.0779m  TC=0,0 
+R_RT7         N11712 N11716  773.5510m TC=0,0 
+G_G7         0 JUNCTION-TEMPERATURE-1RC VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+C_C10         N94536 N94151  {C4}  TC=0,0 
+C_C12         N95722 N95798  {C2}  TC=0,0 
+C_C5         N92368 N92773  {C2}  TC=0,0 
+V_V_Gate         G GATE 0VDC
+C_C8         N94061 N94123  {C2}  TC=0,0 
+V_V4         N11732 0 {TEMP}
+R_R10         N94536 N94151  {R4} TC=0,0 
+R_R5         N92368 N92773  {R2} TC=0,0 
+C_C3         N91434 N91125  {C2}  TC=0,0 
+R_R12         N95722 N95798  {R2} TC=0,0 
+R_R8         N94061 N94123  {R2} TC=0,0 
+R_RT8         N11716 N11732  271.2874m TC=0,0 
+R_RT6         N11708 N11712  224.6985m TC=0,0 
+R_R3         N91434 N91125  {R2} TC=0,0 
+R_RT5         J-C-TEMP-TANK N11708  230.4631m TC=0,0 
+C_C1         JUNCTION-TEMPERATURE-1RC N89014  {C1}  TC=0,0 
+C_C13         N95798 N95860  {C3}  TC=0,0 
+C_C9         N94123 N94536  {C3}  TC=0,0 
+R_R13         N95798 N95860  {R3} TC=0,0 
+R_RF8         N18741 N18767  398.4148m TC=0,0 
+R_R9         N94123 N94536  {R3} TC=0,0 
+R_RF5         J-C-TEMP-FILTER N18733  388.2655m TC=0,0 
+X_U1         DRAIN GATE SOURCE SUM85N03-06P 
+C_C4         JUNCTION-TEMPERATURE-3RC N92368  {C1}  TC=0,0 
+R_RF7         N18737 N18741  246.5945m TC=0,0 
+C_C14         N95860 N96370  {C4}  TC=0,0 
+C_C11         JUNCTION-TEMPERATURE-5RC N95722  {C1}  TC=0,0 
+C_CF8         0 N18741  90.4037m  TC=0,0 
+C_C7         JUNCTION-TEMPERATURE-4RC N94061  {C1}  TC=0,0 
+R_R1         JUNCTION-TEMPERATURE-1RC N89014  {R1} TC=0,0 
+C_C2         JUNCTION-TEMPERATURE-2RC N91434  {C1}  TC=0,0 
+R_R4         JUNCTION-TEMPERATURE-3RC N92368  {R1} TC=0,0 
+R_R14         N95860 N96370  {R4} TC=0,0 
+R_R11         JUNCTION-TEMPERATURE-5RC N95722  {R1} TC=0,0 
+C_CF5         0 J-C-TEMP-FILTER  6.7671m  TC=0,0 
+R_R7         JUNCTION-TEMPERATURE-4RC N94061  {R1} TC=0,0 
+R_R2         JUNCTION-TEMPERATURE-2RC N91434  {R1} TC=0,0 
+C_CT5         J-C-TEMP-TANK N11708  78.4026m  TC=0,0 
+C_C15         N96370 N95888  {C5}  TC=0,0 
+V_V9         N92392 0 {TEMP}
+V_V_Source         SOURCE S 0VDC
+V_V11         N95888 0 {TEMP}
+C_CT8         N11716 N11732  8.8700m  TC=0,0 
+V_V10         N94151 0 {TEMP}
+R_R15         N96370 N95888  {R5} TC=0,0 
+G_G4         0 J-C-TEMP-FILTER VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+V_V8         N91125 0 {TEMP}
+C_C6         N92773 N92392  {C3}  TC=0,0 
+C_CT7         N11712 N11716  205.7710m  TC=0,0 
+G_G9         0 JUNCTION-TEMPERATURE-3RC VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+C_CF6         0 N18733  27.0980m  TC=0,0 
+R_R6         N92773 N92392  {R3} TC=0,0 
+G_G11         0 JUNCTION-TEMPERATURE-5RC VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+V_V7         N89014 0 {TEMP}
+G_G10         0 JUNCTION-TEMPERATURE-4RC VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+G_G8         0 JUNCTION-TEMPERATURE-2RC VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+R_RF6         N18733 N18737  466.7252m TC=0,0 
+V_V_Drain         D DRAIN 0VDC
+G_G6         0 J-C-TEMP-TANK VALUE {
++  (V(Drain)*I(V_V_Drain)+V(Gate)*I(V_V_Gate)+V(Source)*I(V_V_Source)) }
+V_V6         N18767 0 {TEMP}
+.ENDS
+
+*July 30, 2007
+*Doc. ID: 79391, S-71544, Rev. B
+*File Name: SUM85N03-06P_PS.txt and SUM85N03-06P_PS.lib
+*This document is intended as a SPICE modeling guideline and does not
+*constitute a commercial product data sheet.  Designers should refer to the
+*appropriate data sheet of the same number for guaranteed specification
+*limits.
+.SUBCKT SUM85N03-06P 4 1 2
+M1  3 1 2 2 NMOS W=4608149u L=0.50u   
+M2  2 1 2 4 PMOS W=4608149u L=0.30u  
+R1  4 3     RTEMP 2.2E-3
+CGS 1 2     1600E-12
+DBD 2 4     DBD
+**************************************************************************
+.MODEL  NMOS       NMOS (  LEVEL  = 3               TOX    = 5E-8
++ RS     = 1.2E-3          RD     = 0               NSUB   = 1.9E17   
++ KP     = 1.42E-5         UO     = 650             
++ VMAX   = 0               XJ     = 5E-7            KAPPA  = 6E-3
++ ETA    = 1E-4            TPG    = 1  
++ IS     = 0               LD     = 0                             
++ CGSO   = 0               CGDO   = 0               CGBO   = 0 
++ NFS    = 0.8E12          DELTA  = 0.1)
+*************************************************************************
+.MODEL  PMOS       PMOS (LEVEL    = 3               TOX    = 5E-8
++NSUB    = 5E16            TPG    = -1)           
+ *********************************************************************
+.MODEL DBD D (CJO=1700E-12  VJ=.38 M=0.39
++RS=0.1 FC=0.1 IS=1E-12 TT=5E-8 N=1 BV=30.2)
+*************************************************************************
+.MODEL RTEMP RES (TC1=7.5E-3  TC2=5.5E-6)
+*************************************************************************
+.ENDS
+ 

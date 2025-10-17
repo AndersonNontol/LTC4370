@@ -1,0 +1,6 @@
+# Ignore LTspice backup and temporary files
+*.bak
+*.raw
+*.swp
+*.lib
+*.lib~
